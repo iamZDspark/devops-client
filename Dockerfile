@@ -1,7 +1,7 @@
 ### STAGE 1: Build ### FROM  node  AS  buil... by Bhavya jain
 
 ### STAGE 1: Build ###
-FROM node AS build
+FROM node:12.18-alpine as build-step
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN npm install
